@@ -1,0 +1,1197 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Don - IMDb</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="shortcut icon" href="./assets/svg/imdb-svgrepo-com.svg"
+            type="image/x-icon">
+        <link rel="stylesheet" href="./Assets/Css/style.css">
+
+        <link rel="stylesheet" href="./assets/css/video.css">
+    </head>
+    <body class="bg-black">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container-fluid ">
+
+                <!-- logo -->
+                <a class="navbar-brand" href="#"><svg id="home_img"
+                        class="ipc-logo"
+                        xmlns="http://www.w3.org/2000/svg" width="64"
+                        height="32"
+                        viewBox="0 0 64 32" version="1.1"><g
+                            fill="#F5C518"><rect x="0"
+                                y="0" width="100%" height="100%"
+                                rx="4"></rect></g><g
+                            transform="translate(8.000000, 7.000000)"
+                            fill="#000000"
+                            fill-rule="nonzero"><polygon
+                                points="0 18 5 18 5 0 0 0"></polygon><path
+                                d="M15.6725178,0 L14.5534833,8.40846934 L13.8582008,3.83502426 C13.65661,2.37009263 13.4632474,1.09175121 13.278113,0 L7,0 L7,18 L11.2416347,18 L11.2580911,6.11380679 L13.0436094,18 L16.0633571,18 L17.7583653,5.8517865 L17.7707076,18 L22,18 L22,0 L15.6725178,0 Z"></path><path
+                                d="M24,18 L24,0 L31.8045586,0 C33.5693522,0 35,1.41994415 35,3.17660424 L35,14.8233958 C35,16.5777858 33.5716617,18 31.8045586,18 L24,18 Z M29.8322479,3.2395236 C29.6339219,3.13233348 29.2545158,3.08072342 28.7026524,3.08072342 L28.7026524,14.8914865 C29.4312846,14.8914865 29.8796736,14.7604764 30.0478195,14.4865461 C30.2159654,14.2165858 30.3021941,13.486105 30.3021941,12.2871637 L30.3021941,5.3078959 C30.3021941,4.49404499 30.272014,3.97397442 30.2159654,3.74371416 C30.1599168,3.5134539 30.0348852,3.34671372 29.8322479,3.2395236 Z"></path><path
+                                d="M44.4299079,4.50685823 L44.749518,4.50685823 C46.5447098,4.50685823 48,5.91267586 48,7.64486762 L48,14.8619906 C48,16.5950653 46.5451816,18 44.749518,18 L44.4299079,18 C43.3314617,18 42.3602746,17.4736618 41.7718697,16.6682739 L41.4838962,17.7687785 L37,17.7687785 L37,0 L41.7843263,0 L41.7843263,5.78053556 C42.4024982,5.01015739 43.3551514,4.50685823 44.4299079,4.50685823 Z M43.4055679,13.2842155 L43.4055679,9.01907814 C43.4055679,8.31433946 43.3603268,7.85185468 43.2660746,7.63896485 C43.1718224,7.42607505 42.7955881,7.2893916 42.5316822,7.2893916 C42.267776,7.2893916 41.8607934,7.40047379 41.7816216,7.58767002 L41.7816216,9.01907814 L41.7816216,13.4207851 L41.7816216,14.8074788 C41.8721037,15.0130276 42.2602358,15.1274059 42.5316822,15.1274059 C42.8031285,15.1274059 43.1982131,15.0166981 43.281155,14.8074788 C43.3640968,14.5982595 43.4055679,14.0880581 43.4055679,13.2842155 Z"></path></g></svg></a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+
+                    <div class="dropdown bg-black">
+                        <button
+                            class="btn text-white fw-bold d-flex justify-content-center  align-items-center me-3"
+                            type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list fs-2"></i>
+                            <span class="fs-4">Movies</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another
+                                    action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else
+                                    here</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- search -->
+                    <div class="input-group mb-3 mt-3 w-50 ">
+                        <button
+                            class="btn btn-outline-secondary dropdown-toggle "
+                            type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">All</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another
+                                    action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else
+                                    here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Separated
+                                    link</a></li>
+                        </ul>
+                        <input type="text" class="form-control"
+                            aria-label="Text input with dropdown button">
+                    </div>
+                    <!-- search -->
+
+                    <!-- nav -->
+                    <div class="s-items ">
+                        <ul
+                            class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page"
+                                    href="#"><i
+                                        class="bi bi-bookmark-plus-fill"></i>
+                                    Watchlist</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="register.html">Sign
+                                    In</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- write the code from here -->
+
+        <section id="section-img">
+            <!-- upper row  -->
+            <div class="container-fluid u-1">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <div
+                            class="d-flex justify-content-end align-items-center video-nav">
+                            <ul class="nav fw-bold ">
+                                <li><a href="#"
+                                        class="text-white nav-link">
+                                        Cast & crew </a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link">User
+                                        reviews </a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link">Trivia</a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link">FAQ</a></li>
+                                <li><span><img
+                                            src="./assets/svg/grey_stroke.svg"
+                                            alt></span></li>
+                                <li><a href="#"
+                                        class="text-white nav-link">IMDbPr
+                                    </a></li>
+                                <li><span><img
+                                            src="./assets/svg/grey_stroke.svg"
+                                            alt></span></li>
+
+                                <li><a href="#"
+                                        class="text-white nav-link"><i
+                                            class="bi bi-grid-fill"></i> All
+                                        Topics </a></li>
+                                <li><span><img
+                                            src="./assets/svg/grey_stroke.svg"
+                                            alt></span></li>
+
+                                <li><a href="#"
+                                        class="text-white nav-link"><i
+                                            class="bi bi-share-fill"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- second row -->
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div>
+                            <h1><span>Don : Mast Life </span></h1>
+                        </div>
+                        <div class="text-white">
+                            <span>Original title:DON</span>
+                        </div>
+
+                        <div class="text-white">
+                            <p>2024 &middot; 12A &middot; 1m 39s</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <div class="d-flex justify-content-end">
+
+                            <div class="me-4 fw-bold star-width1">
+                                <div class="text-secondary">
+                                    IMDb RATING
+                                </div>
+                                <div
+                                    class="d-flex justify-content-center align-items-center star-width ">
+                                    <div class="me-2">
+                                        <i
+                                            class="bi bi-star-fill fs-4 text-warning"></i>
+                                    </div>
+
+                                    <div class="d-flex flex-column ">
+                                        <div class="star-height"> <span
+                                                class="fs-4">8.9</span> <span
+                                                class="text-secondary"> /
+                                                10</span></div>
+                                        <span class="text-secondary">25k</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="fw-bold star-width1">
+                                <div class="text-secondary">
+                                    YOUR RATING
+                                </div>
+                                <div class="fs-4 text-star star-width ms-2">
+                                    <span><i class="bi bi-star "></i></span>
+                                    <span>Rate</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- video and image section -->
+                <div class="row align-items-stretch">
+                    <!-- Ensures equal height columns -->
+                    <!-- First Column (Image) -->
+                    <div class="col-sm-12 col-md-3 mb-5 d-flex">
+                        <div class="w-100 h-100  exclusive-position1">
+                            <img
+                                src="./assets/images/Don.jpg"
+                                alt class="img-fluid h-100">
+                        </div>
+
+                    </div>
+
+                    <!-- Second Column (Video) -->
+                    <div class="col-sm-12 col-md-7 d-flex">
+                        <div
+                            class="w-100 h-100 position-relative ">
+
+                           
+                        
+
+                            
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/s5ak-NY6OC8?si=jUlzfpVXQkwSihss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <!-- Third Column (Video Info) -->
+                    <div
+                        class="col-sm-12 col-md-2 d-flex justify-content-center align-items-center position-relative">
+                        <!-- Floating Grey Boxes with Icons -->
+                        <div
+                            class="position-absolute top-0 start-0 d-flex flex-column gap-2 align-items-center">
+                            <div
+                                class=" text-white rounded d-flex flex-column align-items-center justify-content-center box2">
+                                <i class="bi bi-collection-play fs-2"></i>
+                                <span>11 Videos</span>
+                            </div>
+
+                            <div
+                                class=" text-white rounded d-flex flex-column align-items-center justify-content-center box2">
+                                <i class="bi bi-images fs-2"></i>
+                                <span>180 Photos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <div class="bg-secondary ">
+
+                    </div>
+                </div>
+
+                <!-- buttons -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 ">
+                        <div class="mb-3">
+                            <button type="button"
+                                class="btn btn-outline-secondary rounded-pill ms-1 fw-bold text-light">Action
+                                Epic</button>
+                            <button type="button"
+                                class="btn btn-outline-secondary rounded-pill ms-1 fw-bold text-light">Globetrotting
+                                Adventure</button>
+
+                            <button type="button"
+                                class="btn btn-outline-secondary rounded-pill ms-1 fw-bold text-light">Spy</button>
+
+                            <button type="button"
+                                class="btn btn-outline-secondary rounded-pill ms-1 fw-bold text-light">Action</button>
+
+                            <button type="button"
+                                class="btn btn-outline-secondary rounded-pill ms-1 fw-bold text-light">Adventure</button>
+                            <button type="button"
+                                class="btn btn-outline-secondary rounded-pill ms-1 fw-bold text-light">Thriller</button>
+                        </div>
+                        <div class="mt-2">
+                            <span>
+                                <p>
+                                    A man reminisces his good old college days and thinks about how he managed to find his purpose and get his life together.
+
+                                </p>
+
+                            </span>
+                        </div>
+                        <hr>
+                        <div class=" flex-column">
+                            <span class="fw-bold me-2">Director</span>
+                            <span class="text-primary ">Cibi Chakaravarthi</span>
+                        </div>
+                        <hr>
+                        <div class=" flex-column">
+                            <span class="fw-bold me-2">Writer</span>
+                            <span class="text-primary ">Cibi Chakaravarthi </span>
+                        </div>
+                        <hr>
+                        <div class=" flex-column">
+                            <span class="fw-bold me-2">Star</span>
+                            <span class="text-primary ">Shivakartikeyan . Soori .
+                              Priyanka Mohan</span>
+                        </div>
+                        <hr>
+                        <div class=" flex-column mb-3">
+                            <span class="fw-bold me-2">IMDB <span
+                                    class="text-primary">Pro</span></span>
+                            <span class="text-primary fw-bold">See production
+                                info at IMDbPro<i
+                                    class="bi bi-box-arrow-up-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 ">
+                        <div class>
+                            <div>
+                                <span class="text-warning">STREAMING</span>
+                            </div>
+                            <div>
+                                <img class="prime-edit mt-1"
+                                    src="./Assets/Images/prime.png" alt>
+                            </div>
+
+                        </div>
+                        <!-- yellow button -->
+                        <div class="mt-3">
+                            <a href="Register.html">
+                                <button type="button"
+                                    class="btn btn-warning rounded-pill w-100 y-button"><i
+                                        class="bi bi-plus-lg me-1"></i>Add to
+                                    Watchlist
+                                </button>
+                            </a>
+
+                        </div>
+
+                        <div class="mt-1">
+                            <button type="button"
+                                class="btn btn-outline-secondary w-100 rounded-pill text-primary"><i
+                                    class="bi bi-eye text-primary me-1"></i>Mark
+                                as watched</button>
+                        </div>
+
+                        <div class="mt-3">
+                            <span class="fw-bold">1.8K</span>
+                            <span>User reviews</span>
+
+                            <span class="fw-bold ms-2">443</span>
+                            <span>Critic reviews</span>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="section-2">
+            <div class="container-fluid">
+                <!-- yellow border -->
+                <div class="row ">
+                    <div class="col-sm-12 col-md-8 mt-">
+                        <div
+                            class="border border-warning mt-5 mb-5 award justify-content-between">
+                            <div class="yellow">
+                            </div>
+
+                            <div
+                                class="d-flex align-items-center justify-content-center">
+                                <span class="fw-bold ms-2">AWARDS</span>
+                                <span class="ms-3 ">5 wins & 30 nominations
+                                    total</span>
+                            </div>
+
+                            <div class=" d-flex  align-items-center ms-5 me-1">
+                                <span><i class="bi bi-chevron-right"></i></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- topcast -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <div class="d-flex align-items-center mb-4">
+                            <span><img class="bar-height"
+                                    src="./Assets/SVG/stroke.svg" alt></span>
+                            <span class="fs-3 fw-bold">Top Cast</span>
+
+                            <span class="fw-bold fs-4"><i
+                                    class="bi bi-chevron-right "></i></span>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- cast -->
+                <div class="row">
+                    <!-- 1 and 2 -->
+
+                    <div class="col-sm-12 col-md-8 d-flex  align-items-center">
+                        <div class="d-flex align-items-center ms-3">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/SK.avif" alt>
+                            <div class="d-flex flex-column ms-4">
+                                <span class="fw-bold fs-5">Shivakarthikeyan</span>
+                                <span class=" text-secondary">Chakravarti</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center ms-5">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/prathap.jpg" alt>
+                            <div class="d-flex flex-column ms-4">
+                                <span class="fw-bold fs-5">Priyanka Mohan</span>
+                                <span class=" text-secondary"> Angaryakarni</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 3 and 4 -->
+                    <div
+                        class="col-sm-12 col-md-8 d-flex  align-items-center mt-4">
+                        <div class="d-flex align-items-center ms-4 me-5 ">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/soo.jpg" alt>
+                            <div class="d-flex flex-column  ms-3">
+                                <span class="fw-bold fs-5">
+                                    Soori </span>
+                                <span class=" text-secondary">Perusu</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center ms-5">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/muni.jpg
+                " alt>
+                            <div class="d-flex flex-column ms-4">
+                                <span class="fw-bold fs-5">Munishkanth
+                                </span>
+                                <span class=" text-secondary">Azhagu</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 5 and 6 -->
+                    <div
+                        class="col-sm-12 col-md-8 d-flex  align-items-center mt-4">
+                        <div class="d-flex align-items-center ms-3 me-5 ">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/sj.jpg" alt>
+                            <div class="d-flex flex-column ms-4">
+                                <span class="fw-bold fs-5">S.J Suryah</span>
+                                <span class=" text-secondary">Bhoominathan</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center ms-5">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/samu.avif" alt>
+                            <div class="d-flex flex-column ">
+                                <span class="fw-bold fs-5">Samutirakarni</span>
+                                <span class=" text-secondary">Ganesan</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 7 and 8 -->
+                    <!-- <div
+                        class="col-sm-12 col-md-8 d-flex  align-items-center mt-4">
+                        <div class="d-flex align-items-center ms-3 me-3">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/Achyuth_Kumar.jpg" alt>
+                            <div class="d-flex flex-column ms-4">
+                                <span class="fw-bold fs-5">Achyuth Kumar</span>
+                                <span class=" text-secondary">Krishna</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center ms-1">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/aa.avif" alt>
+                            <div class="d-flex flex-column ms-4">
+                                <span class="fw-bold fs-5">
+                                    Ananth Nag
+                                    </span>
+                                <span class=" text-secondary">Vishwa Joshi</span>
+                            </div>
+                        </div>
+
+                    </div> -->
+
+                    <!-- 9 and 10 -->
+                    <!-- <div
+                        class="col-sm-12 col-md-8 d-flex  align-items-center mt-4 mb-3">
+                        <div class="d-flex align-items-center ms-3 me-5">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/jinbei.jpg" alt>
+                            <div class="d-flex flex-column ms-4 2">
+                                <span class="fw-bold fs-5">Jinbei</span>
+                                <span class=" text-secondary">Wardlord</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center ms-5 ">
+                            <img class="bar-height1 rounded-circle"
+                                src="./Assets/Images/brook.jpg" alt>
+                            <div class="d-flex flex-column ms-4">
+                                <span class="fw-bold fs-5">Brook</span>
+                                <span class=" text-secondary">Musician</span>
+                            </div>
+                        </div>
+
+                    </div> -->
+
+                </div>
+
+                <!-- details-->
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <hr>
+                        <div>
+                            <span class="fw-bold ms-3">Director</span>
+                            <span class="text-primary ms-3">Cibi Chakaravarthi</span>
+                        </div>
+                        <hr>
+                        <div class=" flex-column">
+                            <span class="fw-bold ms-3">Writer</span>
+                            <span class="text-primary ms-3 "> Cibi Chakaravarthi</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold ms-3">All cast and crew</span>
+                            <span><i class="bi bi-chevron-right"></i></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-5">
+                            <span class="fw-bold ms-3">Production,box office &
+                                more at IMDbPro</span>
+                            <span><i
+                                    class="bi bi-box-arrow-up-right"></i></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- videos -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 ms-2">
+                        <div class="d-flex align-items-center mb-4">
+                            <span><img class="bar-height"
+                                    src="./Assets/SVG/stroke.svg" alt></span>
+                            <span class="fs-3 fw-bold">Videos</span>
+
+                            <span class="fw-bold fs-4 align-items-center"><i
+                                    class="bi bi-chevron-right "></i></span>
+                        </div>
+                        <div class="row">
+                            <!-- img1 -->
+                            <div class="col-sm-12 col-md-6">
+                                <div class="nav-link exclusive">
+                                    <a href="#">
+                                        <div
+                                            class="d-flex justify-content-center align-items-center video">
+                                            <img class="radius"
+                                                src="./Assets/Images/sk1.jpg"
+                                                alt>
+                                        </div>
+                                        <div
+                                            class="text-light d-flex justify-content-center align-items-center play1 mt-5">
+                                            <span>
+                                                <i
+                                                    class="bi bi-play-circle fw-bold me-2  fs-3"></i>
+                                            </span>
+                                            <span>
+                                                2:34
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <div class="mt-1 text-light ">
+                                        <div>
+                                            <a class="nav-link mt-1 text-dark "
+                                                href="#">
+                                           College Days
+                                            </a>
+                                        </div>
+
+                                        <div class="mt-1 text-dark">
+                                            <span><i
+                                                    class="bi bi-hand-thumbs-up me-1"></i>55.8k</span>
+                                            <span><i
+                                                    class="bi bi-heart-fill text-danger me-1"></i>90k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- img1 ends -->
+
+                            <!-- img2 -->
+                            <div class="col-sm-12 col-md-6">
+                                <div class="nav-link exclusive">
+                                    <a href="#">
+                                        <div
+                                            class="d-flex justify-content-center align-items-center video">
+                                            <img class="radius"
+                                                src="./Assets/Images/sk2.jpg"
+                                                alt>
+                                        </div>
+                                        <div
+                                            class="text-light d-flex justify-content-center align-items-center play1">
+                                            <span>
+                                                <i
+                                                    class="bi bi-play-circle fw-bold me-2 fs-3"></i>
+                                            </span>
+                                            <span>
+                                                2:50
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <div class="mt-1 text-light ">
+                                        <div>
+                                            <a class="nav-link mt-1 text-dark"
+                                                href="#">
+                                           Fun and Frustration
+                                            </a>
+                                        </div>
+
+                                        <div class="mt-1 text-dark">
+                                            <span><i
+                                                    class="bi bi-hand-thumbs-up me-1 "></i>156k</span>
+                                            <span><i
+                                                    class="bi bi-heart-fill text-danger me-1"></i>678k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- img2 ends -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4videos -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                        <!-- img1 -->
+                        <div class="col-sm-12 col-md-3 ms-3">
+                            <div class="nav-link exclusive">
+                                <a href="#">
+                                    <div
+                                        class="d-flex justify-content-center align-items-center ">
+                                        <img class="radius"
+                                            src="./Assets/Images/sk3.jpg"
+                                            alt>
+                                    </div>
+                                    <div
+                                        class="text-light d-flex justify-content-center align-items-center play2 mt-5">
+                                        <span>
+                                            <i
+                                                class="bi bi-play-circle fw-bold me-2  fs-5"></i>
+                                        </span>
+                                        <span>
+                                            2:34
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="mt-1 text-light ">
+                                    <div>
+                                        <a class="nav-link mt-1 text-dark "
+                                            href="#">
+                                           Happy
+                                        </a>
+                                    </div>
+
+                                    <div class="mt-1 text-dark">
+                                        <span><i
+                                                class="bi bi-hand-thumbs-up me-1"></i>55.8k</span>
+                                        <span><i
+                                                class="bi bi-heart-fill text-danger me-1"></i>90k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- img1 ends -->
+
+                        <!-- img2 -->
+                        <div class="col-sm-12 col-md-3">
+                            <div class="nav-link exclusive ms-1">
+                                <a href="#">
+                                    <div
+                                        class="d-flex justify-content-center align-items-center ">
+                                        <img class="radius"
+                                            src="./Assets/Images/sk4.jpg"
+                                            alt>
+                                    </div>
+                                    <div
+                                        class="text-light d-flex justify-content-center align-items-center play2 mt-5">
+                                        <span>
+                                            <i
+                                                class="bi bi-play-circle fw-bold me-2  fs-5"></i>
+                                        </span>
+                                        <span>
+                                            2:34
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="mt-1 text-light ">
+                                    <div>
+                                        <a class="nav-link mt-1 text-dark "
+                                            href="#">
+                                      Friends
+                                        </a>
+                                    </div>
+
+                                    <div class="mt-1 text-dark">
+                                        <span><i
+                                                class="bi bi-hand-thumbs-up me-1"></i>55.8k</span>
+                                        <span><i
+                                                class="bi bi-heart-fill text-danger me-1"></i>90k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- img2 ends -->
+
+                        <!-- img3 -->
+                        <div class="col-sm-12 col-md-3">
+                            <div class="nav-link exclusive ms-1">
+                                <a href="#">
+                                    <div
+                                        class="d-flex justify-content-center align-items-center ">
+                                        <img class="radius"
+                                            src="./Assets/Images/sk5.jpg"
+                                            alt>
+                                    </div>
+                                    <div
+                                        class="text-light d-flex justify-content-center align-items-center play2 mt-5">
+                                        <span>
+                                            <i
+                                                class="bi bi-play-circle fw-bold me-2  fs-5"></i>
+                                        </span>
+                                        <span>
+                                            2:34
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="mt-1 text-light ">
+                                    <div>
+                                        <a class="nav-link mt-1 text-dark "
+                                            href="#">
+                                          Entertainment
+                                        </a>
+                                    </div>
+
+                                    <div class="mt-1 text-dark">
+                                        <span><i
+                                                class="bi bi-hand-thumbs-up me-1"></i>55.8k</span>
+                                        <span><i
+                                                class="bi bi-heart-fill text-danger me-1"></i>90k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- img3 ends -->
+
+                        <!-- img4 -->
+                        <div class="col-sm-12 col-md-3">
+                            <div class="nav-link exclusive ms-2">
+                                <a href="#">
+                                    <div
+                                        class="d-flex justify-content-center align-items-center ">
+                                        <img class="radius"
+                                            src="./Assets/Images/sk6.jpg"
+                                            alt>
+                                    </div>
+                                    <div
+                                        class="text-light d-flex justify-content-center align-items-center play2 mt-5">
+                                        <span>
+                                            <i
+                                                class="bi bi-play-circle fw-bold me-2  fs-5"></i>
+                                        </span>
+                                        <span>
+                                            2:34
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="mt-1 text-light ">
+                                    <div>
+                                        <a class="nav-link mt-1 text-dark "
+                                            href="#">
+                                         Love 
+                                        </a>
+                                    </div>
+
+                                    <div class="mt-1 text-dark">
+                                        <span><i
+                                                class="bi bi-hand-thumbs-up me-1"></i>55.8k</span>
+                                        <span><i
+                                                class="bi bi-heart-fill text-danger me-1"></i>90k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- img4 ends -->
+                    </div>
+                </div>
+
+                <!-- more like this -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <div class="d-flex align-items-center mb-4 mt-4 ">
+                            <span><img class="bar-height"
+                                    src="./Assets/SVG/stroke.svg" alt></span>
+                            <span class="fs-3 fw-bold">More like this</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 d-flex align-items-center">
+
+                        <div class="col-sm-12 col-md-3 mb-5 ms-2 me-1 ">
+                            <div class="card border-0 h-100 d-flex flex-column">
+                                <img
+                                    src="./Assets/Images/onepiece.jpg"
+                                    alt="Card image cap"
+                                    class="card-img-top">
+                                <!-- <img class="text-light book-size3 ms-2" src="./Assets/SVG/bookmark.svg" alt=""> -->
+                                <div
+                                    class="card-body card-color text-light rounded-bottom d-flex flex-column ">
+                                    <span><i
+                                            class="bi bi-star-fill text-warning"></i>
+                                        8.9 <i
+                                            class="bi bi-star text-primary ms-3"></i></span>
+                                    <h5 class="card-title mt-2 mb-4">One Piece
+                                        live action Series</h5>
+                                    <!-- <p class="card-text">Upcoming</p> -->
+                                    <div class="mt-auto text-center"> <a
+                                            href="#"
+                                            class="btn text-primary card-btn-style deco ">Watch
+                                            Now</a>
+                                        <p class="mt-3 mb-3 fw-bold">
+                                            <span><i
+                                                    class="bi bi-play-fill"></i>
+                                                Trailer <i
+                                                    class="bi bi-exclamation-circle ms-4"></i></span>
+                                        </p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-3 mb-5 me-1">
+                            <div class="card border-0 h-100 d-flex flex-column">
+                                <img
+                                    src="./Assets/Images/Ala vaikuntapuramlo.jpg"
+                                    alt="Card image cap"
+                                    class="card-img-top">
+                                <!-- <img class="text-light book-size3 ms-2" src="./Assets/SVG/bookmark.svg" alt=""> -->
+                                <div
+                                    class="card-body card-color text-light rounded-bottom d-flex flex-column ">
+                                    <span><i
+                                            class="bi bi-star-fill text-warning"></i>
+                                        8.9 <i
+                                            class="bi bi-star text-primary ms-3"></i></span>
+                                    <h5
+                                        class="card-title mt-2 mb-4">Alavaikuntapuramloo</h5>
+                                    <!-- <p class="card-text">Upcoming</p> -->
+                                    <div class="mt-auto text-center"> <a
+                                            href="#"
+                                            class="btn text-primary card-btn-style deco ">Watch
+                                            Now</a>
+                                        <p class="mt-3 mb-3 fw-bold">
+                                            <span><i
+                                                    class="bi bi-play-fill"></i>
+                                                Trailer <i
+                                                    class="bi bi-exclamation-circle ms-4"></i></span>
+                                        </p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-3 mb-5 me-1 ">
+                            <div class="card border-0 h-100 d-flex flex-column">
+                                <img
+                                    src="./Assets/Images/bahaddur.jpg"
+                                    alt="Card image cap"
+                                    class="card-img-top">
+                                <!-- <img class="text-light book-size3 ms-2" src="./Assets/SVG/bookmark.svg" alt=""> -->
+                                <div
+                                    class="card-body card-color text-light rounded-bottom d-flex flex-column ">
+                                    <span><i
+                                            class="bi bi-star-fill text-warning"></i>
+                                        8.9 <i
+                                            class="bi bi-star text-primary ms-3"></i></span>
+                                    <h5
+                                        class="card-title mt-2 mb-4">Bahaddur</h5>
+                                    <!-- <p class="card-text">Upcoming</p> -->
+                                    <div class="mt-auto text-center"> <a
+                                            href="#"
+                                            class="btn text-primary card-btn-style deco ">Watch
+                                            Now</a>
+                                        <p class="mt-3 mb-3 fw-bold">
+                                            <span><i
+                                                    class="bi bi-play-fill"></i>
+                                                Trailer <i
+                                                    class="bi bi-exclamation-circle ms-4"></i></span>
+                                        </p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-3 mb-5 ">
+                            <div class="card border-0 h-100 d-flex flex-column">
+                                <img
+                                    src="./Assets/Images/Amaran.jpg"
+                                    alt="Card image cap"
+                                    class="card-img-top">
+                                <!-- <img class="text-light book-size3 ms-2" src="./Assets/SVG/bookmark.svg" alt=""> -->
+                                <div
+                                    class="card-body card-color text-light rounded-bottom d-flex flex-column ">
+                                    <span><i
+                                            class="bi bi-star-fill text-warning"></i>
+                                        8.9 <i
+                                            class="bi bi-star text-primary ms-3"></i></span>
+                                    <h5 class="card-title mt-2 mb-4">Amaran</h5>
+                                    <!-- <p class="card-text">Upcoming</p> -->
+                                    <div class="mt-auto text-center"> <a
+                                            href="#"
+                                            class="btn text-primary card-btn-style deco ">Watch
+                                            Now</a>
+                                        <p class="mt-3 mb-3 fw-bold">
+                                            <span><i
+                                                    class="bi bi-play-fill"></i>
+                                                Trailer <i
+                                                    class="bi bi-exclamation-circle ms-4"></i></span>
+                                        </p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8">
+                            <div class="d-flex align-items-center mb-4 mt-4 ">
+                                <span><img class="bar-height"
+                                        src="./Assets/SVG/stroke.svg"
+                                        alt></span>
+                                <span class="fs-3 fw-bold">FAQ</span>
+
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-primary">
+                                    Which is the Original language?
+                                </span>
+                                <span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-primary">
+                                    what is the rating od this movie?
+                                </span>
+                                <span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </div>
+
+                            <hr class="mb-5">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8">
+                            <div class="d-flex  mb-4 mt-4 flex-column">
+                                <div>
+                                    <span><img class="bar-height"
+                                            src="./Assets/SVG/stroke.svg"
+                                            alt></span>
+                                    <span class="fs-3 fw-bold">Contribute to
+                                        this page</span>
+                                    <span><i
+                                            class="bi bi-chevron-right fs-2 fw-bold"></i></span>
+                                </div>
+                                <div class="d-flex align-items-center ms-4 ">
+                                    <span class="text-secondary">
+                                        Suggest an edit or add missing content
+                                    </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between ms-3">
+                                <span class="fw-bold">IMDB Answers:Help fill
+                                    gaps in our data</span>
+                                <span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between ms-3">
+                                <span class="fw-bold">Learn more about
+                                    contributing</span>
+                                <span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 mt-2 ms-3 mb-5">
+                            <button type="button"
+                                class="btn btn-warning rounded-pill long"><i
+                                    class="bi bi-pencil-fill me-2"></i>Edit
+                                Page</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- end the code here -->
+
+            <footer class="container-fluid bg-black mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center mt-4 mb-4">
+                            <a href="register.html"> <button type="button"
+                                    class="btn btn-warning rounded-pill">Sign
+                                    In
+                                    for
+                                    more access</button></a>
+                        </div>
+
+                        <div>
+                            <div class="container f-max">
+                                <div class="row ">
+
+                                    <div class="col-sm-12 col-md-6 mb-5">
+                                        <div
+                                            class="footer-border d-flex align-items-center justify-content-center flex-column">
+                                            <div
+                                                class="text-white fw-bold fs-4">
+                                                <span>Follow IMDb on
+                                                    social</span>
+                                            </div>
+
+                                            <div
+                                                class="text-white social fs-2">
+                                                <span><i
+                                                        class="bi bi-tiktok"></i></span>
+                                                <span><i
+                                                        class="bi bi-instagram"></i></span>
+                                                <span><i
+                                                        class="bi bi-twitter-x"></i></span>
+                                                <span><i
+                                                        class="bi bi-youtube"></i></span>
+                                                <span><i
+                                                        class="bi bi-facebook"></i></span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-6 mb-5">
+                                        <div
+                                            class="footer-border d-flex align-items-center justify-content-center flex-column">
+
+                                            <div
+                                                class="text-white social align-items-center ">
+                                                <div
+                                                    class="d-flex flex-column">
+                                                    <span
+                                                        class="fw-bold fs-4">Get
+                                                        The IMDb app</span>
+                                                    <span
+                                                        class="fs-5 text-secondary">For
+                                                        Android and
+                                                        IOS</span>
+                                                </div>
+                                                <div> <span><i
+                                                            class="bi bi-qr-code qr-code"></i></span></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-center align-items-center">
+                            <ul class="nav ">
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Help
+                                        <i
+                                            class="bi bi-box-arrow-up-right"></i></a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Site
+                                        Index <i
+                                            class="bi bi-box-arrow-up-right"></i></a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">IMDb
+                                        Pro <i
+                                            class="bi bi-box-arrow-up-right"></i></a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Box
+                                        Office Mojo <i
+                                            class="bi bi-box-arrow-up-right"></i></a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">License
+                                        IMDb Data <i
+                                            class="bi bi-box-arrow-up-right"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-center align-items-center">
+                            <ul class="nav">
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Press
+                                        Room </a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Advertising
+                                        <i
+                                            class="bi bi-box-arrow-up-right"></i></a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Jobs
+                                        <i
+                                            class="bi bi-box-arrow-up-right"></i></a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Conditions
+                                        Of Use </a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Privacy
+                                        Policy</a></li>
+                                <li><a href="#"
+                                        class="text-white nav-link nav-item">Your
+                                        Ads Privacy Choices</a></li>
+                            </ul>
+                        </div>
+                        <div
+                            class="d-flex justify-content-center align-items-center mt-4 mb-4">
+                            <div
+                                class="d-flex align-items-center text-white">
+                                <span>an </span>
+                                <span class="text-white marr"><img
+                                        class="amazon-img"
+                                        src="./assets/images/amazon (1).png"
+                                        alt></span>
+                                <span> Amazon company</span>
+                            </div>
+                        </div>
+
+                        <div> <h4 class="text-center text-white">copyrights
+                                &copy;
+                                design from
+                                IMDb</h4>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+        </body>
+    </html>
